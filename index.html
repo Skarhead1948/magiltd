@@ -1,105 +1,117 @@
-HTML
-
 <!DOCTYPE html>
 <html lang="bg">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAGI - Coffee Accessories</title>
+    <title>MAGI | Coffee Accessories</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #3e2723; /* Тъмно кафе */
-            --bg-color: #fdfdfd;
-            --text-color: #333;
+            --coffee-dark: #2c1e1a;
+            --coffee-accent: #6f4e37;
+            --bg-light: #faf8f6;
+            --text-main: #333333;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-main);
             margin: 0;
-            padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-color);
             display: flex;
             flex-direction: column;
             min-height: 100vh;
             align-items: center;
             justify-content: center;
-        }
-
-        header {
             text-align: center;
-            padding: 2rem;
         }
 
-        .logo-container {
-            margin-bottom: 1.5rem;
+        .container {
+            padding: 40px 20px;
+            max-width: 800px;
+        }
+
+        /* Стилизация на логото */
+        .logo-wrapper {
+            margin-bottom: 30px;
         }
 
         .logo-img {
-            max-width: 200px;
+            max-width: 250px; /* Можете да регулирате размера тук */
             height: auto;
-            border-radius: 8px;
-            /* Можете да премахнете сянката, ако логото има собствен фон */
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
-        }
-
-        .content {
-            text-align: center;
-            max-width: 600px;
-            padding: 0 20px;
+            border-radius: 4px;
         }
 
         h1 {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-            letter-spacing: 2px;
-        }
-
-        p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            color: #666;
-        }
-
-        .badge {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 5px;
+            color: var(--coffee-dark);
+            margin: 10px 0;
             text-transform: uppercase;
-            margin-top: 20px;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: var(--coffee-accent);
+            font-weight: 300;
+            margin-bottom: 40px;
+        }
+
+        /* Индикатор "В процес на разработка" */
+        .status-box {
+            border: 1px solid #dcdcdc;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .under-construction {
+            display: inline-block;
+            background-color: var(--coffee-dark);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
         }
 
         footer {
-            margin-top: auto;
-            padding: 2rem;
-            font-size: 0.9rem;
-            color: #999;
+            margin-top: 50px;
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        a {
+            color: var(--coffee-accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo-container">
-            <img src="logo.jpg" alt="MAGI Logo" class="logo-img">
+    <div class="container">
+        <div class="logo-wrapper">
+            <img src="logo.jpg" alt="MAGI Coffee Accessories Logo" class="logo-img">
         </div>
-    </header>
 
-    <div class="content">
         <h1>MAGI</h1>
-        <p>Премиум аксесоари за любителите на истинското кафе.</p>
-        <div class="badge">В процес на разработка</div>
-        <p style="margin-top: 30px; font-size: 1rem;">
-            Подготвяме нещо специално за вашия сутрешен ритуал. Очаквайте ни скоро на немския пазар.
-        </p>
+        <p class="tagline">The Art of Coffee Brewing</p>
+
+        <div class="status-box">
+            <div class="under-construction">COMING SOON / ОЧАКВАЙТЕ СКОРО</div>
+            <p>В момента разработваме нашата гама от премиум кафе аксесоари.</p>
+            <p>Скоро ще бъдем на немския пазар, за да превърнем всяка чаша кафе в магическо изживяване.</p>
+        </div>
     </div>
 
     <footer>
-        &copy; 2026 Magi EOOD. Всички права запазени. | <a href="mailto:contact@magiltd.org" style="color: inherit;">contact@magiltd.org</a>
+        &copy; 2026 Magi EOOD. Всички права запазени.<br>
+        Contact: <a href="mailto:office@magiltd.org">office@magiltd.org</a>
     </footer>
 
 </body>
