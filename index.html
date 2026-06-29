@@ -28,7 +28,7 @@
             align-items: center;
         }
 
-        /* --- THE NEW LOGO --- */
+        /* --- THE LOGO --- */
         .logo-wrap {
             display: flex;
             flex-direction: column;
@@ -36,43 +36,10 @@
             margin-bottom: 40px;
         }
 
-        .logo-icon {
-            width: 60px;
-            height: 60px;
-            border: 1.5px solid var(--brand-green);
-            border-radius: 50%;
-            position: relative;
-            margin-bottom: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* Stylized leaf symbol using CSS shapes */
-        .logo-icon::after {
-            content: '';
-            width: 25px;
-            height: 25px;
-            background-color: var(--brand-green);
-            border-radius: 100% 0 100% 0; /* Creates leaf shape */
-            transform: rotate(-15deg);
-        }
-
-        .logo-name {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            font-weight: 400;
-            letter-spacing: 0.15rem;
-            color: var(--brand-green);
-            margin: 0;
-        }
-
-        .logo-tagline {
-            font-size: 0.75rem;
-            letter-spacing: 0.4rem;
-            text-transform: uppercase;
-            color: var(--brand-gold);
-            margin-top: 5px;
+        .brand-logo {
+            max-width: 200px; /* Adjust this width depending on your logo's dimensions */
+            height: auto;
+            display: block;
         }
         /* --- END LOGO --- */
 
@@ -115,9 +82,7 @@
 <body>
 
     <div class="logo-wrap">
-        <div class="logo-icon"></div>
-        <h2 class="logo-name">MAGI</h2>
-        <span class="logo-tagline">BULGARIA</span>
+        <img src="logo.png" alt="MAGI BULGARIA" class="brand-logo">
     </div>
 
     <div class="content">
